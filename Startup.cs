@@ -55,7 +55,7 @@ namespace Web.Site.Agenda
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Empresa}/{action=CriarEmpresa}/{id?}");
+                    pattern: "{controller=Empresa}/{action=Index}/{id?}");
             });
         }
     }
