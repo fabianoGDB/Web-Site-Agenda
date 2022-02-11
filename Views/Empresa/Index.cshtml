@@ -1,7 +1,7 @@
 @model IEnumerable<Web.Site.Agenda.Models.Empresa>
 
 @{
-    ViewData["Title"] = "Contatos cadastrados";
+    ViewData["Title"] = "Empresas cadastrados";
 }
 
 <div class="alert alert-dark row align-content-center">
@@ -57,7 +57,7 @@
                 </div>
 
                 <div class="card-footer">
-                    <a asp-action="Index" asp-route-EmpresaId="@item.Id" class="btn btn-sm btn-outline-primary">Atualizar</a> |
+                    <a asp-action="AtualizarEmpresa" asp-route-Id="@item.Id" class="btn btn-sm btn-outline-primary">Atualizar</a> |
                     <a class="btn btn-sm btn-outline-danger" onclick="ConfirmarExclusao(@item.Id, '@item.Nome')">Excluir</a>
                 </div>
             </div>
@@ -75,7 +75,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>Prosseguir com a exclusão do contato <text class="nomeEmpresa"></text> ?</p>
+                <p>Prosseguir com a exclusão do empresa <text class="nomeEmpresa"></text> ?</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-secondary btnFechar" data-dismiss="modal">Não</button>
