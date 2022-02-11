@@ -1,0 +1,29 @@
+version: "3.9"
+  
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: "PostPass2022!"
+    ports:
+      - "5432:5432"
+    volumes:
+      - /home/fabiano/projetos/banco_de_dados/dados:/var/lib/postgresql/data
+    networks:
+      - pg-network
+        
+  pg-admin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "email@gmail.post.com.br"
+      PGADMIN_DEFAULT_PASSWORD: "PgPass2022!"
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    networks:
+      - pg-network
+
+networks:
+  pg-network:
+    driver: bridge
