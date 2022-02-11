@@ -14,17 +14,17 @@
 </div>
 
 <div>
-    @if (TempData["ContatoNovo"] != null)
+    @if (TempData["EmpresaNova"] != null)
     {
-        <p class="alert alert-success">@TempData["ContatoNovo"].ToString()</p>
+        <p class="alert alert-success">@TempData["EmpresaNova"].ToString()</p>
     }
-    @if (TempData["ContatoAtualizado"] != null)
+    @if (TempData["EmpresaAtualizada"] != null)
     {
-        <p class="alert alert-primary">@TempData["ContatoAtualizado"].ToString()</p>
+        <p class="alert alert-primary">@TempData["EmpresaAtualizada"].ToString()</p>
     }
-    @if (TempData["ContatoExcluido"] != null)
+    @if (TempData["EmpresaExcluida"] != null)
     {
-        <p class="alert alert-danger">@TempData["ContatoExcluido"].ToString()</p>
+        <p class="alert alert-danger">@TempData["EmpresaExcluida"].ToString()</p>
     }
 </div>
 
@@ -92,7 +92,7 @@
             $(".modal").modal();
             $(".btnExcluir").on('click', function () {
                 $.ajax({
-                    url: 'Empresas/ExcluirEmpresa',
+                    url: 'Empresa/ExcluirEmpresa',
                     method: 'POST',
                     data: { Id: Id },
                     success: function (data) {                       
