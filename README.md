@@ -6,7 +6,6 @@
 <li>EntityFramework Core Relational</li>
 <li>EntityFramework Core Tools</li>
 <li>Npgsql.EntityFramework Core</li>
-<li>x.PagedList.Mvc</li>
 </ul>
 
 <br></br>
